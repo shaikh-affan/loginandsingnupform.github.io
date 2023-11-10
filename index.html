@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("./pexels-liger-pham-1108701.jpg");
+        backdrop-filter: blur(5px);
+        background-size: cover;
+      }
+
+      .box1 {
+        width: 500px;
+        margin: auto; 
+        transition: .3s;
+        height: 500px;
+        backdrop-filter: blur(10px);
+
+        
+      }
+
+      .box1:last-child{
+        position: absolute;
+        left: 100%;
+      }
+
+      /* .background-radial-gradient {
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+        hsl(218, 41%, 35%) 15%,
+        hsl(218, 41%, 30%) 35%,
+        hsl(218, 41%, 20%) 75%,
+        hsl(218, 41%, 19%) 80%,
+        transparent 100%),
+      radial-gradient(1250px circle at 100% 100%,
+        hsl(218, 41%, 45%) 15%,
+        hsl(218, 41%, 30%) 35%,
+        hsl(218, 41%, 20%) 75%,
+        hsl(218, 41%, 19%) 80%,
+        transparent 100%);
+  } */
+
+      .bg-glass {
+        background-color: hsla(0, 0%, 100%, 0.9) !important;
+        backdrop-filter: saturate(200%) blur(25px);
+      }
+      .bigbx {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        width: 700px;
+        height: 100vh;  
+        align-items: center;
+        overflow: hidden;
+      }
+      .cursor-pointer	{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Section: Design Block -->
+    <section class="background-radial-gradient">
+      <div
+        class="container px-4 py-5 px-md-5 text-center text-lg-start my-3 bigbx"
+      >
+        <div class="card bg-glass box1">
+          <div class="card-body px-4 py-5 px-md-5 m-2">
+            <div>
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="form-outline mb-4">
+                  <input type="text" id="signup-name" class="form-control" />
+                  <label class="form-label" for="signup-name">Name</label>
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="signup-email" class="form-control" />
+                <label class="form-label" for="signup-email"
+                  >Email address</label
+                >
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input
+                  type="password"
+                  id="signup-password"
+                  class="form-control"
+                />
+                <label class="form-label" for="signup-password">Password</label>
+              </div>
+              <center>
+                <!-- Submit button -->
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-4"
+                  onclick="signup()"
+                >
+                  Sign up
+                </button>
+                
+              </center>
+              <div class="d-flex gap-2 ">
+                <p>If you have alrady an account</p>
+              <span class="text-decoration-underline text-primary cursor-pointer	" onclick="log()">Login</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-glass ml-1 box1">
+          <div class="card-body px-4 py-5 px-md-5">
+            <div>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="login-email" class="form-control" />
+                <label class="form-label" for="login-email"
+                  >Email address</label
+                >
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input
+                  type="password"
+                  id="login-password"
+                  class="form-control"
+                />
+                <label class="form-label" for="login-password">Password</label>
+              </div>
+              <center>
+                <!-- Submit button -->
+                <button
+                  type="submit"
+                  class="btn btn1 btn-primary btn-block mb-4"
+                  onclick="login()"
+                >
+                  Log in
+                </button>
+              </center>
+              <div class="d-flex gap-2 ">
+                <p>If you don'n have account </p>
+              <span class="text-decoration-underline text-primary cursor-pointer	" onclick="sign()">Sign in</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Design Block -->
+  </body>
+</html>
